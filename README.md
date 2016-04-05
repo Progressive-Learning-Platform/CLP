@@ -2,7 +2,7 @@
 ##Installation Guide
 
 ###1. Installing Dependancies
-Building PLPC requires GNU flex, GNU bison, gcc, and libarchive (git has been included because it is requried to clone this repository). The following has been tested on Ubuntu 14.04 LTS (64-bit), but should work on any Debian Linux distribution:
+Building PLPC requires GNU flex, GNU bison, gcc, and libarchive (git has been included because it is requried to clone this repository). The following has been tested on Ubuntu 14.04 LTS (64-bit) using PLPTool 5.2 (link included in instructions), but should work on any Debian Linux distribution:
 
 ```bash
 sudo apt-get install git flex bison gcc libarchive-dev
@@ -31,7 +31,7 @@ nano ~/.profile
 
 Add the following to the end of the file:
 
-```
+```bash
 # add plptool environment variable
 plptool="java -jar /usr/lib/plptool5/PLPToolStatic.jar"
 export plptool
@@ -45,7 +45,7 @@ Use `Ctrl+x` to exit nano, type `y` to modify the file, and hit `enter` to save 
 
 
 ###5. Building and Testing Compiler
-Now your system should be ready to build and test the compiler. After logging back in navigate to the CLP directory:
+Now your system should be ready to build and test the compiler. After logging back, in navigate to the CLP directory:
 
 ```bash
 cd ~/CLP
