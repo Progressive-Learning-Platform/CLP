@@ -26,7 +26,7 @@ Add the following to the end of the file:
 
 ```
 # add plptool environment variable
-plptool = "java -jar /usr/lib/plptool5/PLPToolStatic.jar"
+plptool="java -jar /usr/lib/plptool5/PLPToolStatic.jar"
 export plptool
 
 # add PLP compiler bin to PATH
