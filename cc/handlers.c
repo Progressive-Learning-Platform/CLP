@@ -1052,7 +1052,7 @@ void handle_postfix_expr(node *n) {
 				}
 			}
 			
-		}
+		//}
 	} 
 	else if (strcmp(n->children[1]->id, "dot") == 0)
 	{
