@@ -194,7 +194,7 @@ int main(int argc, char *argv[]) {
 
 	log("[plpc] preprocessor\n");
 	/* build preprocessor arguments */
-	sprintf(command, "plppp -o %s.pp -d %d %s %s ",
+	sprintf(command, "./plppp -o %s.pp -d %d %s %s ",
 		S_FILE_OUTPUT, 			/* output file name */
 		LOG_LEVEL, 			/* debug level */
 		STOP_ERRORS ? "" : "-e", 	/* stop on errors */
@@ -217,7 +217,7 @@ int main(int argc, char *argv[]) {
 	log("[plpc] c compiler\n");
 	
 	/* build compiler options */
-	sprintf(command, "plpcc -o %s.asm -d %d	%s %s %s %s %s %s %s.pp",
+	sprintf(command, "./plpcc -o %s.asm -d %d	%s %s %s %s %s %s %s.pp",
 		S_FILE_OUTPUT,			/* output file name */
 		LOG_LEVEL,			/* debug level */
 		PSYMBOL ? "-s" : "",		/* print symbol table */

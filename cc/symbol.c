@@ -202,7 +202,7 @@ node* install_symbol(symbol_table *t, node *n) {
 								{
 									temp -> is_typedef = 0;
 								}
-								else if (strcmp (types -> children[1] -> id, "typedef") == 0)
+								else if (types -> num_children>1 && strcmp (types -> children[1] -> id, "typedef") == 0)
 								{
 									temp -> is_typedef = 1;
 								/*
@@ -457,7 +457,8 @@ node* install_function(symbol_table *t, node *n) {
 
 void install_parameters(symbol_table *t, node *n) {
 	int i;
-	if (n->children[0]->num_children == 1)
+	
+	if (n->children[0]->num_children <= 1)//changed ==1 to <=1, to resolve segmentation fault
 		return;
 	n = n->children[0]->children[1]->children[0]; /* the parameter list */
 	/* each of n's children is a parameter declaration */

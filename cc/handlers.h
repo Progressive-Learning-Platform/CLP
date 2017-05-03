@@ -88,5 +88,8 @@ void handle_jump_statement(node *);
 void handle_translation_unit(node *);
 void handle_function_definition(node *);
 void handle_asm(node *);
+void handle_scanfint(node *, char *);
+void handle_scanfchar(node *, char *);
+void handle_scanfstring(node *,char *, int);
 
 #endif
