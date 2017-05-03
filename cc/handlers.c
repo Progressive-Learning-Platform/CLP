@@ -75,6 +75,7 @@ int param_words = 0;
 int locals = 0;
 symbol *last_symbol = NULL;
 
+
 void epilogue(node *n) {
 	e("addiu $sp, $sp, %d\t# Epilogue\n", locals);
 	e("move $sp, $s7\n");

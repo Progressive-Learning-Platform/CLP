@@ -20,6 +20,7 @@
 #define HANDLERS
 #include "types.h"
 
+
 int is_global(symbol_table*, char*);
 int get_offset(symbol_table*, char*);
 void handle_identifier(node *);

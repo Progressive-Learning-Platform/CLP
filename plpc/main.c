@@ -42,6 +42,7 @@ int PBUILTIN = 0;
 int file_index = 0;
 int CLEANUP = 1;
 
+
 void print_usage(void) {
 	printf("plpc - plp c toolchain\n\n");
 	printf("usage: plpc <options> <input files>\n");
